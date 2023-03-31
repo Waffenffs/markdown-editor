@@ -54,7 +54,6 @@ textarea:focus {
 
 .markdown {
   font-size: 1rem;
-  padding-left: 10px;
 }
 
 blockquote {
@@ -83,4 +82,18 @@ ul li::before {
   content: "• ";
   color: #c1715e;
   font-size: 30px;
+}
+
+.header {
+  font-size: 1.2rem;
+  background-color: #1e1f23;
+  color: #b7b8bd;
+  padding: 10px;
+  padding-left: 20px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.preview-container {
+  padding-left: 10px;
 }
