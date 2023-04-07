@@ -1,15 +1,16 @@
 import React from 'react'
 import { marked } from 'marked';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DOMPurify from 'dompurify'
 import '../App.css'
 
-// TO DO
-// create a database for each users
-// use firebase's firestore for the DB
-// use firebase's auth for user authentication
-// maybe use node.js firebase SDK?
-
+  // TO-DO:
+  // 1. use Firestore and create a database
+      // structure: /users/{user_name}/documents/{...}
+  // 2. use Firebase Auth for user authentication
+  // 3. create login/register page
+    
+  
 function Editor() {
   // allows marked to render new lines
   marked.setOptions({ breaks: true })
@@ -22,16 +23,21 @@ function Editor() {
     setContent(e.target.value)
   }
 
+
   return (
     <main>
       <div className="container">
         <article className='plain-text'>
-          <div className="header">MARKDOWN</div>
-          <textarea onChange={handleChange} placeholder='Separate lines with two spaces'></textarea>
+          <div className="header">
+            <p>MARKDOWN</p>
+          </div>
+          <textarea onChange={handleChange}></textarea>
         </article>
 
         <article className="markdown">
-          <div className="header">PREVIEW</div>
+          <div className="header">
+            <p>PREVIEW</p>
+          </div>
           <div className="preview-container">
             <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(content.replace(/&gt;+/g, '>')))}} />
           </div>

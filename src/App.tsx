@@ -1,14 +1,15 @@
 import './App.css'
-import Navigation from './components/Nav'
-import Editor from './components/Editor'
+import Home from './routes/Home'
+import Auth from './routes/Auth'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
-    <div className="App">
-      <Navigation />
-      <Editor />
-    </div>
+    <Routes>
+      <Route path='/' element={ <Home /> }/>
+      <Route path='/auth' element={ <Auth /> } />
+    </Routes>
   )
 }
 
