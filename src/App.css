@@ -145,6 +145,49 @@ hr {
 /* Auth CSS */
 
 .auth-container {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1f23;
+}
+
+.authentication {
+  background-color: #b7b8bd;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-width: 55vh;
+}
+
+.auth-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.part-container > input { 
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.part-container > input:focus {
+  outline: none;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container > button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid thin black;
+  cursor: pointer;
 }
