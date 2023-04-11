@@ -154,7 +154,7 @@ hr {
 }
 
 .authentication {
-  background-color: #b7b8bd;
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 10px;
   color: black;
@@ -163,9 +163,15 @@ hr {
   min-width: 55vh;
 }
 
+.authentication > .create-account-inquiry {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .auth-title {
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 2rem;
 }
 
@@ -188,6 +194,84 @@ hr {
   font-size: 1rem;
   padding: 10px;
   border-radius: 10px;
-  border: solid thin black;
+  border: none;
+  color: white;
   cursor: pointer;
+  background-color: #31af99;
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+}
+
+.shake {
+  animation: shake 0.1s;
+}
+
+.shake > button {
+  background-color: red;
+}
+
+.button-container > button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  filter: brightness(90%);
+}
+
+.account-inquiry {
+  color: #4f7fe1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-inquiry:hover {
+  filter: brightness(90%);
+}
+
+.auth-back-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #31af99;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-back-container:hover {
+  filter: brightness(90%);
+}
+
+.auth-back-container > button {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* ANIMATIONS */
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
