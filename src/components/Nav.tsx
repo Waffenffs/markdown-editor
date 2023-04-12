@@ -8,8 +8,12 @@ import '../App.css'
 function Navigation() {
     const [showBar, setShowBar] = useState<boolean>(false);
 
+    // add features of logging out;
+        // if user is logged in, the markdown data will be kept intact
+            // for the user to access on later accesses
+
     return(
-        <>
+        <React.Fragment>
             <nav>
                 <div className="nav-bar" onClick={() => setShowBar(prevState => !prevState)}>
                     <FaBars />
@@ -24,7 +28,7 @@ function Navigation() {
                 </div>
                 <h1>MARKDOWN</h1>
             </nav>
-        </>
+        </React.Fragment>
     )
 }
 
