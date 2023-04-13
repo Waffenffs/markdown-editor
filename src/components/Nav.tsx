@@ -10,6 +10,7 @@ import { auth } from "../routes/Home";
 import '../App.css'
 
 function Navigation() {
+    
     const [showBar, setShowBar] = useState<boolean>(false);
     const { authenticated, username } = useContext(UserContext);
 

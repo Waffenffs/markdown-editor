@@ -2,16 +2,10 @@ import React from 'react'
 import { marked } from 'marked';
 import { useState } from 'react';
 import DOMPurify from 'dompurify'
-import '../App.css'
-
-  // TO-DO:
-  // 1. use Firestore and create a database
-      // structure: /users/{user_name}/documents/{...}
-  // 2. use Firebase Auth for user authentication
-  // 3. create login/register page
-    
+import '../App.css'    
   
 function Editor() {
+  
   // allows marked to render new lines
   marked.setOptions({ breaks: true })
 
@@ -22,7 +16,6 @@ function Editor() {
   const handleChange = (e: any) => {
     setContent(e.target.value)
   }
-
 
   return (
     <main>
